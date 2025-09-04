@@ -1,0 +1,32 @@
+# Python virtual environment
+venv/
+.env
+.env.local
+.env.production
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment and package directories
+.Python
+pip-delete-this-directory.txt
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files (e.g., VSCode, PyCharm)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
