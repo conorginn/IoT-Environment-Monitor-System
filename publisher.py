@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from pubnub.pnconfiguration import PNConfiguration
 from pubnub.pubnub import PubNub
 from utils.adc import MCP3008
-from sensors.dht11_sensor import DHT11Sensor
+from sensors.dht22_sensor import DHT22Sensor
 import RPi.GPIO as GPIO
 
 # Load environment variables
@@ -18,7 +18,7 @@ GPIO.setup(PIR_PIN, GPIO.IN)
 
 # Initialize sensors
 adc = MCP3008()
-dht11 = DHT11Sensor()
+dht22 = DHT22Sensor()
 
 # PubNub configuration
 pnconfig = PNConfiguration()
@@ -32,8 +32,8 @@ pubnub = PubNub(pnconfig)
 
 def read_sensors():
     """Read all sensor values"""
-    # Read DHT11 (temperature and humidity)
-    temperature, humidity = dht11.read()
+    # Read DHT22 (temperature and humidity)
+    temperature, humidity = dht22.read()
     
     # Read LDR via MCP3008 channel 0
     ldr_value, ldr_voltage = adc.read_channel(0)
